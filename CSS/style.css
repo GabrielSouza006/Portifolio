@@ -283,76 +283,84 @@ main .container {
   main .container {
     flex-direction: column;
     align-items: center;
+    gap: 20px;
   }
-  main .container .main-image {
+  .main-img {
     width: 100%;
+    display: flex;
+    justify-content: center;
   }
-  main .container .main-text {
+  .main-text {
     width: 100%;
     text-align: center;
   }
-  main .container .main-text h1 {
+  .main-text h1 {
     font-size: 4rem;
   }
-  main .container .main-text {
+  .main-text div {
     justify-content: center;
   }
   .resultados .container {
     flex-direction: column;
+    gap: 20px;
   }
   .resultados-text {
-    color: var(--azure);
-    font-size: 1.6rem;
-    font-weight: 600;
-    width: 50%;
-    text-align: center;
-    margin: 0 auto;
-  }
-
-  .resultados-numero {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--azure);
-    gap: 40px;
-  }
-  .resultados .resultados-text,
-  .resultados .resultados-numero {
+    color: var(--prussian-blue); /* Corrigido para bom contraste em fundo claro */
     width: 100%;
     text-align: center;
   }
   .resultados-numero {
-    margin-top: 30px;
+    color: var(--prussian-blue); /* Corrigido para bom contraste */
+    width: 100%;
+    text-align: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
   }
   .diferencias .container {
     flex-direction: column;
+    gap: 20px;
   }
   .diferencias .card {
     width: 100%;
-    margin-bottom: 24px;
-    z-index: 1; /* Garante que o card fique atrás do menu */
-    position: relative;
-  }
-  .ul {
-    z-index: 10; /* Garante que o menu fique acima dos cards */
+    margin-bottom: 20px;
   }
   .casa .container {
     flex-direction: column-reverse;
-    gap: 30px; /* Espaço menor no mobile */
+    gap: 30px;
   }
-  .casa .casa-text,
-  .casa .casa-img {
+  .casa .casa-img,
+  .casa .casa-text {
     width: 100%;
     text-align: center;
-    padding-left: 0;
+  }
+  .casa .casa-img img {
+    max-width: 100%;
+    height: auto;
   }
 }
 @media (max-width: 440px) {
   .resultados .resultados-numero {
     flex-direction: column;
+    gap: 15px;
   }
   main .container .main-text h1 {
     font-size: 3rem;
+  }
+  .main-img img {
+    width: 90%;
+  }
+  .casa .casa-img img {
+    width: 100%;
+  }
+  .diferencias .card {
+    padding: 10px;
+  }
+  #contact h2 {
+    font-size: 2rem;
+  }
+  #contact p {
+    font-size: 1rem;
   }
 }
 /* Melhoria: Suaviza transições de hover e botões */
